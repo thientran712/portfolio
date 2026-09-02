@@ -273,6 +273,9 @@ body {
     0 16px 48px rgba(0, 0, 0, 0.06);
   padding: 44px 52px;
 }
+.section {
+  scroll-margin-top: calc(var(--navbar-h) + 16px);
+}
 .section:first-of-type .container {
   margin-top: -40px;
   position: relative;
@@ -679,6 +682,19 @@ body {
   color: var(--amber);
   margin-left: 6px;
   vertical-align: middle;
+}
+
+/* EXPERIENCE SUB-HEADINGS */
+.exp-subhead {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 34px 0 14px;
+}
+.exp-subhead.first {
+  margin-top: 0;
 }
 
 /* CAREER ROWS */
