@@ -497,6 +497,22 @@ body {
   height: 4px;
   background: linear-gradient(90deg, var(--accent) 0%, var(--purple) 100%);
 }
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.featured-grid .screens-row {
+  margin-bottom: 0;
+  justify-content: center;
+}
+.sh-sub {
+  font-size: 1.05rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 .featured-eyebrow {
   display: inline-flex;
   align-items: center;
@@ -591,6 +607,9 @@ body {
   margin-bottom: 16px;
   max-width: 68ch;
 }
+.featured-overview .featured-desc {
+  margin-bottom: 0;
+}
 
 /* SCREENSHOT MOCKUPS */
 .screens-row {
@@ -679,16 +698,15 @@ body {
   width: 100%;
   display: block;
 }
-.browser-row .browser-mockup img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: top;
-}
 .browser-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 16px;
+}
+.browser-row .browser-mockup {
+  width: 100%;
+  max-width: 520px;
 }
 .pcard-screens {
   margin-bottom: 14px;
@@ -1005,6 +1023,10 @@ body {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
     padding: 56px 24px 100px;
@@ -1032,9 +1054,6 @@ body {
   }
 }
 @media (max-width: 700px) {
-  .browser-row {
-    grid-template-columns: 1fr;
-  }
   .screens-row {
     justify-content: center;
   }
